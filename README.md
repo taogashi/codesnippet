@@ -20,3 +20,17 @@ for( int i = 0; i < bin; i++ ) {
 		}
 }
 ```
+
+```
+# call create_ap to create an access point
+
+start on (net-device-added and usb-device-added and leds-device-added)
+stop on runlevel [016]
+
+console log
+
+script
+	sleep 5
+	exec /usr/bin/create_ap -n wlan0 vot llllllll
+end script
+```
