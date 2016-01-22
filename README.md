@@ -1,5 +1,5 @@
 # codesnippet
-``` cplusplus
+``` c++
 cv::Mat hist;
 cv::Mat histimg = cv::Mat::zeros(500, 320, CV_8UC3);
 int bin = 80;
@@ -21,7 +21,7 @@ for( int i = 0; i < bin; i++ ) {
 }
 ```
 
-```
+```shell
 # call create_ap to create an access point
 
 start on (net-device-added and usb-device-added and leds-device-added)
