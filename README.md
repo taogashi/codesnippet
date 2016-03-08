@@ -34,3 +34,10 @@ script
 	exec /usr/bin/create_ap -n wlan0 vot llllllll
 end script
 ```
+
+```c++
+float constrainf(float val, float threshold)
+{
+	return (val >= 0.0 ? (val > threshold ? threshold : val) : (val < -threshold ? -threshold : val));
+}
+```
