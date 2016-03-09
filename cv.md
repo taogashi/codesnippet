@@ -1,4 +1,15 @@
 ```c++
+void resize_image(const cv::Mat &src, cv::Mat &dst, float scale)
+{
+	if (scale*src.cols <= 15 || scale*src.rows <= 15) {
+		cv::resize(src, dst, cv::Size(15, 15));
+		return;
+	}
+	cv::resize(src, dst, cv::Size(), scale, scale);
+}
+```
+
+```c++
 void rotate_image(const cv::Mat &src, cv::Mat &dst, float degree)
 {
 	float rad = degree/57.296;
