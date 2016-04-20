@@ -7,6 +7,9 @@ start on (net-device-added and usb-device-added and leds-device-added)
 stop on runlevel [016]
 
 console log
+respawn
+# retry up to 10 times within a period of 5 seconds
+respawn limit 10 5
 
 script
 	sleep 5
