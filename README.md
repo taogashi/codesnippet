@@ -29,3 +29,25 @@ float constrainf(float val, float threshold)
 sleep(sec);
 usleep(micro second)
 ```
+
+```shell
+#!/bin/bash
+dev_list=`fdisk -l|grep /dev|grep Disk|awk '{print $2}'|tr -d :`
+for disk in $dev_list
+do
+	echo $disk
+	if [[ $disk == *"loop"* ]]
+	then
+		continue
+	else
+		disk_id=`fdisk -l $disk|grep identifier|awk '{print $3}'`
+		if [[ $disk_id -eq 0x709960b4 ]] || [[ $disk_id -eq 0x43a7a05b ]]
+		then
+			continue
+		fi
+		echo "target disk found, start writing"
+		/usr/sbin/ocs-sr -g auto -e1 auto -e2 -c -r -j2 -scr -p true restoredisk xxx-img ${disk//\/dev\/}
+		echo "writing complete"
+	fi
+done
+```
