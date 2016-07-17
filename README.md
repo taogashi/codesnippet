@@ -51,3 +51,6 @@ do
 	fi
 done
 ```
+```c
+#define COUNTOF(__BUFFER__)   (sizeof(__BUFFER__) / sizeof(*(__BUFFER__)))
+```
