@@ -35,3 +35,11 @@ float Q_rsqrt( float number )
 	return y;
 }
 ```
+
+```cmake
+find_package(Eigen3 REQUIRED)
+include_directories(
+	${EIGEN3_INCLUDE_DIR}
+	)
+```
+
