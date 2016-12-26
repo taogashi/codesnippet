@@ -43,3 +43,10 @@ include_directories(
 	)
 ```
 
+```c++
+/// generate random unique sequence
+std::vector<int> seq_all(range);
+std::iota(seq_all.begin(), seq_all.end(), 0);
+std::random_shuffle ( seq_all.begin(), seq_all.end() );
+std::vector<int> random_seq(seq_all.begin(), seq_all.begin() + sample_num);
+```
