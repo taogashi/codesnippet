@@ -38,3 +38,11 @@ do
 	fi
 done
 ```
+
+```shell
+for i in `seq 0 10`
+do
+	echi $i
+done
+```
+终端里换行用分号。
