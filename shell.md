@@ -46,3 +46,19 @@ do
 done
 ```
 终端里换行用分号。
+
+```shell
+#!/bin/sh
+
+k=1;
+for i in $(seq -f '%04g' 1 1200)
+do
+	if [ -e image-$i.jpeg ]; then
+		newi=$(printf "%04d" $k)
+		mv image-$i.jpeg image-$newi.jpeg
+		k=$((k+1))
+	else
+		echo $i
+	fi
+done
+```
