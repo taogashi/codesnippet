@@ -50,3 +50,14 @@ std::iota(seq_all.begin(), seq_all.end(), 0);
 std::random_shuffle ( seq_all.begin(), seq_all.end() );
 std::vector<int> random_seq(seq_all.begin(), seq_all.begin() + sample_num);
 ```
+
+```c++
+static inline uint32_t NumberOfBits(uint32_t i)
+{
+    // Java: use >>> instead of >>
+    //      // C or C++: use uint32_t
+    i = i - ((i >> 1) & 0x55555555);
+    i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
+    return (((i + (i >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
+}
+```
