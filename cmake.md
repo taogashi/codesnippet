@@ -46,6 +46,6 @@ ExternalProject_Get_Property(project_libgp install_dir)
 add_library(gp STATIC IMPORTED)
 set_target_properties(gp PROPERTIES
 	IMPORTED_LOCATION ${install_dir}/lib/libgp.a
-	INCLUDE_DIRECTORIES ${install_dir}/include/gp)
+	INTERFACE_INCLUDE_DIRECTORIES ${install_dir}/include/gp)
 add_dependencies(gp project_libgp)
 ```
