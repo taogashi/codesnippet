@@ -24,8 +24,9 @@ set nocompatible
 " vim 自身命令行模式智能补全
 set wildmenu
 
-set background=dark
-colorscheme solarized
+set encoding=utf-8
+set background=light
+" colorscheme solarized
 set showcmd		" Show (partial) command in status line.
 set showmatch		" Show matching brackets.
 set ignorecase		" Do case insensitive matching
@@ -37,9 +38,13 @@ set mouse=a		" Enable mouse usage (all modes)
 set cursorline
 set nu
 set tags=tags
-set ts=4
-set shiftwidth=4
+
+set expandtab
+set ts=2
+set shiftwidth=2
+set autoindent
 set foldmethod=manual
+set backspace=indent,eol,start
 
 syntax enable
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
@@ -103,5 +108,4 @@ set nocp
 " map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<CR>
 map ]] :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<CR>
 map , :tnext<CR>
-map == :%!astyle<CR>
-
+map == :%!astyle --style=google -s2<CR>
