@@ -49,3 +49,10 @@ set_target_properties(gp PROPERTIES
 	INTERFACE_INCLUDE_DIRECTORIES ${install_dir}/include/gp)
 add_dependencies(gp project_libgp)
 ```
+```cmake
+get_cmake_property(_variableNames VARIABLES)
+list (SORT _variableNames)
+foreach (_variableName ${_variableNames})
+    message(STATUS "${_variableName}=${${_variableName}}")
+endforeach()
+```
