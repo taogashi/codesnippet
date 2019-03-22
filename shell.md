@@ -1,6 +1,22 @@
 # codesnippet
 
 ```shell
+[Unit]
+Description=shadowsocks on DigitalOcean
+After=ssh.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/ssserver -c /etc/shadowsocks/shadowsocks.json
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```shell
 # call create_ap to create an access point
 
 start on (net-device-added and usb-device-added and leds-device-added)
