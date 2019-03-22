@@ -15,7 +15,18 @@ RestartSec=60
 [Install]
 WantedBy=multi-user.target
 ```
-
+```
+{
+    "server":"192.168.7.207",
+    "server_port":0000,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"xxxxxxxxx",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
+```
 ```shell
 # call create_ap to create an access point
 
