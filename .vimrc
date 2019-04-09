@@ -88,18 +88,24 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" 插件管理
 Plugin 'VundleVim/Vundle.vim'
+" 自动补全
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'iamcco/mathjax-support-for-mkdp' 
-Plugin 'iamcco/markdown-preview.vim' 
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'altercation/vim-colors-solarized'
-" Plugin 'Lokaltog/vim-powerline'
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'vim-scripts/OmniCppComplete'
+" markdown支持
+Plugin 'iamcco/mathjax-support-for-mkdp' 
+Plugin 'iamcco/markdown-preview.vim' 
+" 方便的注释
+Plugin 'scrooloose/nerdcommenter'
+" 主题管理
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+" 自动切换输入法
 Plugin 'vim-scripts/fcitx.vim'
+" 支持xml高亮
 Plugin 'othree/xml.vim'
 call vundle#end()
 filetype plugin indent on
