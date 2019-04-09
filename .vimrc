@@ -100,11 +100,14 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'vim-scripts/fcitx.vim'
+Plugin 'othree/xml.vim'
 call vundle#end()
 filetype plugin indent on
 
 " omnicppcomplete
 set nocp
+exe 'colo' ((strftime('%H') % 20) > 7 ? 'shine' : 'default')
+
 " map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<CR>
 map ]] :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<CR>
 map , :tnext<CR>
