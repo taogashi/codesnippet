@@ -1,3 +1,11 @@
+寻找thread
+```cmake
+find_package(Threads)
+
+target_link_libraries(${PROJECT_NAME}
+  Threads::Threads)
+```
+调试
 ```cmake
 macro(debug_fatal opt) 
 	if ("${opt}" MATCHES "ON")
